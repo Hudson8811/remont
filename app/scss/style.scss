@@ -1115,6 +1115,7 @@ body{
         @include for-md{
             display: flex;
             flex-direction: row;
+            margin-bottom: 15px;
         }
         @include for-tiny-mob{
             flex-direction: column;
