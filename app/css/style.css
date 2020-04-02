@@ -252,7 +252,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4000;
+  z-index: 1000;
   width: 100%;
   background-color: #fff;
   -webkit-transition: .3s;
@@ -454,7 +454,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 42px;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -464,7 +463,7 @@ body {
           justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px;
+  padding: 10px 10px 11px;
   font-size: 18px;
   line-height: 21px;
   font-family: 'Futura PT Demi',sans-serif;
@@ -964,8 +963,8 @@ body {
 
 @media (max-width: 500px) {
   .reviews__button {
-    max-width: 100%;
-    margin: 0 15px;
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
   }
 }
 
@@ -986,6 +985,14 @@ body {
 .reviews-item__text {
   font-family: 'Futura PT Book',sans-serif;
   font-weight: 400;
+}
+
+@media (max-width: 500px) {
+  .reviews-item__text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
 }
 
 .profile {
@@ -1480,6 +1487,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   border: 2px solid #ff531d;
+  background-color: transparent;
   border-radius: 24.5px;
   -webkit-transition: .3s;
   transition: .3s;
@@ -1828,6 +1836,48 @@ body {
 
 @media (max-width: 767px) {
   .modal__input {
+    max-width: 100%;
+  }
+}
+
+.modal__textarea {
+  height: 100px !important;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: 'Futura PT Demi',sans-serif;
+  font-weight: 400;
+  color: #000;
+  border: 1px solid #7e6c6c;
+  border-radius: 20.5px;
+}
+
+.modal__textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+.modal__textarea::-moz-placeholder {
+  color: #000;
+}
+
+.modal__textarea:-ms-input-placeholder {
+  color: #000;
+}
+
+.modal__textarea::-ms-input-placeholder {
+  color: #000;
+}
+
+.modal__textarea::placeholder {
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .modal__textarea {
     max-width: 100%;
   }
 }
