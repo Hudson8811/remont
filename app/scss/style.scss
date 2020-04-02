@@ -7,6 +7,9 @@ $blue2:#0070c4;
 $orange:#ff531d;
 $MyRiad: 'Myriad Pro',sans-serif;
 $orangeGradiend:linear-gradient( -180deg, rgb(255,83,29) 0%, rgb(245,149,78) 99%);
+@mixin for-xl {
+    @media (max-width: 1300px) { @content; }
+  }
 @mixin for-lg {
     @media (max-width: 1139px) { @content; }
   }
@@ -241,7 +244,7 @@ body{
         margin-left: 51px;
         margin-right: 51px;
 
-        @include for-md{
+        @include for-xl{
             margin-left: 0;
             margin-right: 0;
         }
@@ -1458,7 +1461,7 @@ body{
         width: 100%;
         max-width: 210px;
 
-        @include for-sm{
+        @include for-tiny-mob(){
             max-width: 100%;
         }
     }

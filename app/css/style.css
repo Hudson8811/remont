@@ -221,7 +221,7 @@ body {
   margin-right: 51px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1300px) {
   .section--indentation {
     margin-left: 0;
     margin-right: 0;
@@ -1661,7 +1661,7 @@ body {
   max-width: 210px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   .footer__button {
     max-width: 100%;
   }
