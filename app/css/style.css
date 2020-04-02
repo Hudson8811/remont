@@ -2,6 +2,14 @@
   max-width: 1170px;
 }
 
+.modal {
+  cursor: pointer;
+}
+
+.modal__body {
+  cursor: auto;
+}
+
 .wrapper {
   overflow: hidden;
 }
