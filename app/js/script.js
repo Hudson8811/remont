@@ -168,3 +168,26 @@ $("#call-form1").submit(function(){
     return false;
   });
   /**************************/
+
+   /**************************/
+
+   $("#call-form4").submit(function(){
+    if(!falidator(this)) return false;
+    $.ajax({ 
+        type: "POST", 
+        url: "php/form.php",
+        data: $("#call-form3").serialize(),
+        success: function(html) { 
+        
+        }
+    });
+    
+   
+    $('#thansk').modal();
+    $('#call-form4').modal("hide");
+    /*$('.action_block .inputbox').removeClass("not-empty");*/
+    $('#call-form4').trigger("reset");
+    
+    return false;
+  });
+  /**************************/

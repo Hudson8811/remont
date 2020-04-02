@@ -269,7 +269,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4000;
+    z-index: 1000;
 
     width: 100%;
 
@@ -455,12 +455,11 @@ body{
     }
     &__link{
         display: flex;
-        height: 42px;
         width: 100%;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 10px 10px 11px;
 
         font-size: 18px;
         line-height: 21px;
@@ -858,10 +857,11 @@ body{
         margin: -12px auto 0;
 
         @include for-tiny-mob{
-            max-width: 100%;
-            margin: 0 15px;
+            max-width: calc(100% - 30px);
+            margin: 0 auto;
         }
     }
+    
 }
 .reviews-item{
     padding: 44px 30px 45px;
@@ -877,6 +877,12 @@ body{
     }
     &__text{
         @include Book();
+
+        @include for-tiny-mob{
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+        }
     }
 }
 .profile{
@@ -1304,6 +1310,7 @@ body{
         text-transform: uppercase;
 
         border: 2px solid $orange;
+        background-color: transparent;
         border-radius: 24.5px;
 
         transition: .3s;
@@ -1614,6 +1621,30 @@ body{
 
         border: 1px solid #7e6c6c;
         border-radius: 20.5px;
+
+        @include for-sm{
+            max-width: 100%;
+        }
+    }
+
+    &__textarea{
+        height: 100px !important;
+        display: block;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+
+        font-size: 12px;
+        line-height: 15px;
+        @include Demi();
+        color: $black;
+
+        border: 1px solid #7e6c6c;
+        border-radius: 20.5px;
+
+        &::placeholder{
+            color: $black;
+        }
 
         @include for-sm{
             max-width: 100%;
