@@ -1246,6 +1246,23 @@ body{
             }
 
         }
+
+        &--hidden{
+            opacity: 0;
+            height: 0;
+            position: absolute;
+            top: -1000em;
+            overflow: hidden;
+
+            transition: .3s;
+
+            
+        }
+       
+    }
+    &__table-tr.active{
+        position: static;
+        opacity: 1;
     }
     &__table-tr:last-child{
         .prices__table-td:last-child{
@@ -1326,6 +1343,13 @@ body{
 
         transition: .3s;
 
+        &:before{
+            content: "  Увидеть все возможные поломки";
+        }
+
+        &.active:before{
+            content: 'Скрыть';
+        }
         &:hover{
             background-color: $orange;
             color: $white;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container, .container-lg, .container-md, .container-sm, .container-xl {
   max-width: 1170px;
 }
@@ -1413,6 +1414,21 @@ body {
   background-color: #fff;
 }
 
+.prices__table-tr--hidden {
+  opacity: 0;
+  height: 0;
+  position: absolute;
+  top: -1000em;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.prices__table-tr.active {
+  position: static;
+  opacity: 1;
+}
+
 .prices__table-tr:last-child .prices__table-td:last-child {
   border-bottom-right-radius: 5px;
 }
@@ -1500,6 +1516,14 @@ body {
   border-radius: 24.5px;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+.more__button:before {
+  content: "  Увидеть все возможные поломки";
+}
+
+.more__button.active:before {
+  content: 'Скрыть';
 }
 
 .more__button:hover {

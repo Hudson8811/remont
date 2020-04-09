@@ -3,6 +3,7 @@
     if(windowSize < 991){
       $('.header__menu').hide();
       $('.header').removeClass("js-fixed");
+      
     };
   });
   windowSize = $(window).width(); 
@@ -28,7 +29,10 @@ $(document).ready(function() {
   }
 
 });
-  
+$(".more__button").click(function(){
+  $(this).toggleClass("active");
+  $(".prices__table-tr--hidden").toggleClass("active");
+});
 $(function(){
   $('a.scroll-link[href^="#"]').on('click', function(event) {
     // отменяем стандартное действие
