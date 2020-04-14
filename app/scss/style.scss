@@ -1724,3 +1724,30 @@ body{
         display: none;
     }
 }
+
+
+.hashtegs{
+    display: flex;
+    padding: 30px 0;
+    @include for-sm{
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    
+    &__item{
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+    }
+    &__item +  &__item{
+        margin-left: 50px;
+
+        @include for-sm{
+            margin-left: 0;
+        }
+    }
+  }
+  
+  
+  .
+  
