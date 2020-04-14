@@ -1459,7 +1459,7 @@ body {
 
 .prices__table-td:first-child {
   padding-left: 24px;
-  width: 47%;
+  width: 80%;
 }
 
 @media (max-width: 767px) {
